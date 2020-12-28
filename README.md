@@ -92,6 +92,7 @@ Upon completing the game user’s score is displayed on a scoreboard along with 
 
 ### Stretch Goals
 
+
 Animation for traveling to each country
 Multiple questions for each country
 Difficulty options affecting submission type for questions
@@ -99,6 +100,7 @@ If user attempts to navigate away from page while game is active, display alert 
 Hide then display scoreboard
 Reviews and comments can be left on scoreboard
 Game over logic
+Timer
 
 ### Functional Requirements
 
@@ -157,3 +159,9 @@ Country constructor
 ## Leaderboard
 
 Leaderboard should be separately iterated through to be ordered in highest to lowest and saved to localStorage upon loading the webpage for the first time and then anytime the leaderboard array on app.js is updated. Leaderboard.js will load the leaderboard array from localStorage then use DOM manipulation to render an ordered list onto the page with the most updated list of scores.
+
+
+## Sources
+
+- [HP BAR](https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar/20277165)
+
