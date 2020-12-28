@@ -24,6 +24,7 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
   this.quizQ = quizQ;
   this.quizA = quizA;
   this.type = answerType;
+  this.choices = choices;
 
 
   allCountries.push(this);
@@ -84,33 +85,15 @@ Country.prototype.qRender = function () {
     answerLabelF.appendChild(answer2);
   }
   else if (this.type === 'multiChoice') {
-    let answerLabel1 = document.createElement('label');
-    let answerLabel2 = document.createElement('label');
-    let answerLabel3 = document.createElement('label');
-    let answerLabel4 = document.createElement('label');
-    answerLabel1.textContent = 'True';
-    answerLabel2.textContent = 'False';
-    answerLabel3.textContent = 'True1';
-    answerLabel4.textContent = 'False2';
-    fieldset.appendChild(answerLabel1);
-    fieldset.appendChild(answerLabel2);
-    fieldset.appendChild(answerLabel3);
-    fieldset.appendChild(answerLabel4);
-
-    console.log('works1');
-    answer1.type = 'radio';
-    answer2.type = 'radio';
-    answer3.type = 'radio';
-    answer4.type = 'radio';
-    answer1.name = 't';
-    answer2.name = 't';
-    answer3.name = 't';
-    answer4.name = 't';
-    // .name the same allows only 1 answer
-    answerLabel1.appendChild(answer1);
-    answerLabel2.appendChild(answer2);
-    answerLabel3.appendChild(answer3);
-    answerLabel4.appendChild(answer4);
+    for (let i = 0; i < this.choices.length; i++) {
+      let answerLabel1 = document.createElement('label');
+      answerLabel1.textContent = `${this.choices[i]}`;
+      fieldset.appendChild(answerLabel1);
+      let answer = document.createElement('input');
+      answer.type = 'radio';
+      answer.name = 't';
+      answerLabel1.appendChild(answer);
+    }
   }
   else if (this.type === 'userInput') {
     console.log('works');
