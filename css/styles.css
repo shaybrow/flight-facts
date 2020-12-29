@@ -50,3 +50,9 @@ nav a{
   height: 600px;
   width: 900px;
 }
+
+footer {
+  margin-top: 15px;
+  height: 50px;
+  width: 960px;
+}

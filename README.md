@@ -92,7 +92,7 @@ Upon completing the game user’s score is displayed on a scoreboard along with 
 
 ### Stretch Goals
 
-
+User Input
 Animation for traveling to each country
 Multiple questions for each country
 Difficulty options affecting submission type for questions
@@ -164,4 +164,6 @@ Leaderboard should be separately iterated through to be ordered in highest to lo
 ## Sources
 
 - [HP BAR](https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar/20277165)
+
+- [Radio Button](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
 
