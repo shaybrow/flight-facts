@@ -160,7 +160,6 @@ Country constructor
 
 Leaderboard should be separately iterated through to be ordered in highest to lowest and saved to localStorage upon loading the webpage for the first time and then anytime the leaderboard array on app.js is updated. Leaderboard.js will load the leaderboard array from localStorage then use DOM manipulation to render an ordered list onto the page with the most updated list of scores.
 
-
 ## Sources
 
 - [HP BAR](https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar/20277165)
