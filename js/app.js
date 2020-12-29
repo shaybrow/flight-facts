@@ -34,17 +34,25 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
   this.quizA = quizA;
   this.type = answerType;
   this.choices = choices;
-
-
   allCountries.push(this);
 }
-new Country('South Korea', 'img/shawn-ang-72TE3gdDWhw-unsplash (1).jpg', 'placeholder', 'Does South Korea have the fastest average internet speed in the world?', 'true', 'trueOrFalse');
-new Country('Ethiopia', 'img/daggy-j-ali-MUcM3GCCQPk-unsplash (1).jpg', 'placeholder', 'How old is the worlds oldest hominid remains, discovered in Ethiopia?', '4.4 million years old', 'multiChoice', ['2000 years old', '200,000 years old', '3.2 million years old', '4.4 million years old', '1 billion years old']);
-new Country('Denmark', 'img/nick-karvounis-3_ZGrsirryY-unspl.jpg', 'placeholder', 'What\'s the capitol of Denmark?', 'Copenhagen', 'multiChoice', ['Copenhagen', 'Stockholm', 'Helsinki', 'Toronto']);
 
-new Country('Canada', 'img/conor-samuel-Onadzzr1yBU-unsplas.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
+// instantiations of Country
+new Country('South Korea', 'img/southkorea.jpg', 'img/southkorea.png', 'Does South Korea have the fastest average internet speed in the world?', 'true', 'trueOrFalse');
+
+new Country('Ethiopia', 'img/ethiopia.jpg', 'img/ethiopia.png', 'How old is the worlds oldest hominid remains, discovered in Ethiopia?', '4.4 million years old', 'multiChoice', ['2000 years old', '200,000 years old', '3.2 million years old', '4.4 million years old', '1 billion years old']);
+
+new Country('Denmark', 'img/denmark.jpg', 'img/denmark.png', 'What\'s the capitol of Denmark?', 'Copenhagen', 'multiChoice', ['Copenhagen', 'Stockholm', 'Helsinki', 'Toronto']);
+
+new Country('Canada', 'img/canada.jpg', 'img/canada.png', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
 
 new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
+
+new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwain.png', 'In Taiwan, the garbage truck plays Beethoven\'s <em>Fur Elise</em> to announce their arrival.', 'true', 'trueOrFalse');
+
+new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the english language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
+
+new Country('Japan', 'img/japan.jpg', 'img/japan.png', 'What is the fifth largest city in Japan?', 'Sapporo', 'multiChoice', ['Fukuoka', 'Osaka', 'Sapporo', 'Kyoto']);
 // let denmark = new Country('Denmark', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What\'s the capitol of Denmark?', 'Copenhagen', 'userInput');
 
 let h2 = document.createElement('h2');
