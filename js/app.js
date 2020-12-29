@@ -34,17 +34,32 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
   this.quizA = quizA;
   this.type = answerType;
   this.choices = choices;
-
-
   allCountries.push(this);
 }
 
-new Country('Canada', 'img/nick-karvounis-3_ZGrsirryY-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
-new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
+
 new Country('Indonesia', 'img/jeremy-bishop-QUwLZNchflk-unspla (1).jpg', 'In Indonesia resides the world\'s largest flower. What is its name?', 'corpse lily', 'multiChoice', ['corpse lily', 'moth orchid', 'flower of charm', 'moon orchid']);
 new Country('Australia', 'img/dan-freeman-7Zb7kUyQg1E-unsplash (4).jpg','What is the capital of Australia?', 'Canberra', 'multiChoice', ['Canberra', 'Sydney', 'Brisbane', 'Melbourne']);
 new Country('Germany', 'img/claudio-schwarz-purzlbaum-TScGhj (1).jpg', 'In what year did the Berlin Wall fall?', '1989', 'multiChoice', ['1968', '1977', '1989', '1991']);
 new Country('Colombia', 'img/saul-mercado-LFuFLGo_3ME-unsplas (1).jpg', 'How many indigenous languages are spoken in Colombia?', '70', ['50', '60', '70', '80']);
+
+// instantiations of Country
+new Country('South Korea', 'img/southkorea.jpg', 'img/southkorea.png', 'Does South Korea have the fastest average internet speed in the world?', 'true', 'trueOrFalse');
+
+new Country('Ethiopia', 'img/ethiopia.jpg', 'img/ethiopia.png', 'How old is the worlds oldest hominid remains, discovered in Ethiopia?', '4.4 million years old', 'multiChoice', ['2000 years old', '200,000 years old', '3.2 million years old', '4.4 million years old', '1 billion years old']);
+
+new Country('Denmark', 'img/denmark.jpg', 'img/denmark.png', 'What\'s the capitol of Denmark?', 'Copenhagen', 'multiChoice', ['Copenhagen', 'Stockholm', 'Helsinki', 'Toronto']);
+
+new Country('Canada', 'img/canada.jpg', 'img/canada.png', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
+
+new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
+
+new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwain.png', 'In Taiwan, the garbage truck plays Beethoven\'s <em>Fur Elise</em> to announce their arrival.', 'true', 'trueOrFalse');
+
+new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the english language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
+
+new Country('Japan', 'img/japan.jpg', 'img/japan.png', 'What is the fifth largest city in Japan?', 'Sapporo', 'multiChoice', ['Fukuoka', 'Osaka', 'Sapporo', 'Kyoto']);
+
 // let denmark = new Country('Denmark', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What\'s the capitol of Denmark?', 'Copenhagen', 'userInput');
 
 let h2 = document.createElement('h2');
