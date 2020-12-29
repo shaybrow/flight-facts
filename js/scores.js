@@ -34,7 +34,11 @@ function renderScores() {
   }
 }
 // need to figure out how to order the objects from high score to low
-
+function sortScores() {
+  highScores.sort(function (a, b) {
+    return b.luggage - a.luggage;
+  });
+}
 
 
 // render list function
@@ -42,4 +46,5 @@ function renderScores() {
 new Score('Jason', 15);
 new Score('Shay', 5);
 new Score('Darci', 12);
+sortScores();
 renderScores();
