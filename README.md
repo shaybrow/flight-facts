@@ -166,3 +166,9 @@ Leaderboard should be separately iterated through to be ordered in highest to lo
 
 - [Radio Button](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
 
+- [Array Sorting](https://stackoverflow.com/questions/38843059/how-to-set-font-style-italic-using-javascript)
+
+- [Italics](https://stackoverflow.com/questions/38843059/how-to-set-font-style-italic-using-javascript)
+
+- [Splitting hairs (and strings)](https://stackoverflow.com/questions/42827884/split-a-number-from-a-string-in-javascript)
+
