@@ -38,9 +38,13 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
 
   allCountries.push(this);
 }
+new Country('South Korea', 'img/shawn-ang-72TE3gdDWhw-unsplash (1).jpg', 'placeholder', 'Does South Korea have the fastest average internet speed in the world?', 'true', 'trueOrFalse');
+new Country('Ethiopia', 'img/daggy-j-ali-MUcM3GCCQPk-unsplash (1).jpg', 'placeholder', 'How old is the worlds oldest hominid remains, discovered in Ethiopia?', '4.4 million years old', 'multiChoice', ['2000 years old', '200,000 years old', '3.2 million years old', '4.4 million years old', '1 billion years old']);
+new Country('Denmark', 'img/nick-karvounis-3_ZGrsirryY-unspl.jpg', 'placeholder', 'What\'s the capitol of Denmark?', 'Copenhagen', 'multiChoice', ['Copenhagen', 'Stockholm', 'Helsinki', 'Toronto']);
 
-let canada = new Country('Canada', 'img/nick-karvounis-3_ZGrsirryY-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
-let newZealand = new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
+new Country('Canada', 'img/conor-samuel-Onadzzr1yBU-unsplas.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
+
+new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
 // let denmark = new Country('Denmark', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What\'s the capitol of Denmark?', 'Copenhagen', 'userInput');
 
 let h2 = document.createElement('h2');
