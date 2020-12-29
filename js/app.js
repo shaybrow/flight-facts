@@ -7,16 +7,23 @@ let userName;
 let currentCountry;
 let form = document.createElement('form');
 
-// document.getElementById.style("")
-// let grabName = localStorage.getItem('user');
-// if (grabName) {
-//   userName = JSON.parse(grabName);
-//   alert(`Welcome back ${userName}! Thanks for flying with us again.`);
-// } else {
-//   userName = prompt('Welcome aboard! Please enter your name:');
-//   let stringName = JSON.stringify(userName);
-//   localStorage.setItem('user', stringName);
-// }
+function getUserName() {
+  // document.getElementById.style('');
+  let grabName = localStorage.getItem('user');
+  if (grabName) {
+    userName = JSON.parse(grabName);
+    let whatever = confirm(`Welcome back ${userName}! Thanks for flying with us again. Would you like to change your user name?`);
+    if (whatever === true) {
+      userName = prompt('What would you like your name to be?');
+      let stringName = JSON.stringify(userName);
+      localStorage.setItem('user', stringName);
+    }
+  } else {
+    userName = prompt('Welcome aboard! Please enter your name:');
+    let stringName = JSON.stringify(userName);
+    localStorage.setItem('user', stringName);
+  }
+}
 
 
 function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choices = '') {
@@ -44,6 +51,7 @@ gameContainer.appendChild(h2);
 function clickStart(event) {
   let click = event.target.id;
   if (click === 'start') {
+    getUserName();
     gameContainer.innerHTML = '';
     // launch game
     // canada.imgRender(this.src2);
@@ -134,7 +142,7 @@ function submitCheck(event) {
   let answerT = event.target.t.value;
   // console.log(answerT);
   gameContainer.innerHTML = '';
-  if (answerT === newZealand.quizA) {
+  if (answerT === currentCountry.quizA) {
     let aH3 = document.createElement('h3');
     aH3.textContent = 'That\'s correct!';
     form.appendChild(aH3);
@@ -142,15 +150,34 @@ function submitCheck(event) {
   else {
     let aH3 = document.createElement('h3');
     aH3.textContent = 'WRONG!';
+    userLuggage--;
     form.appendChild(aH3);
   }
-  let number = getRandomIndex(allCountries.length);
-  currentCountry = allCountries[number];
+  if (allCountries.length === 0) {
+    let aH4 = document.createElement('h4');
+    aH4.textContent = `Congratulations! You saved ${userLuggage} pieces of luggage!`;
+    gameContainer.appendChild(aH4);
+    let a = document.createElement('a');
+    a.id = 'high-score';
+    a.href = 'scores.html';
+    a.textContent = 'View High Scores';
+    gameContainer.appendChild(a);
+    let stringLuggage = JSON.stringify(`${userLuggage} ${userName}`);
+    localStorage.setItem('score', stringLuggage);
+  }
+  else {
+    let number = getRandomIndex(allCountries.length);
+    currentCountry = allCountries[number];
 
-  currentCountry.imgRender(this.src1);
-  currentCountry.qRender();
-  allCountries.splice(number, 1);
+    currentCountry.imgRender(this.src1);
+    currentCountry.qRender();
+    allCountries.splice(number, 1);
+  }
 }
+
+// function gameOver(){
+
+// }
 
 Country.prototype.imgRender = function () {
   let img = document.createElement('img');
