@@ -1,6 +1,7 @@
 /* styles.css */
+/* General Style rules */
 body{
-background-color: gainsboro;
+background-color: bisque;
 }
 
 main {
@@ -9,20 +10,15 @@ main {
   margin-top: 30px;
 }
 
-#game-container{
-  background-color: green;
-  height: 600px;
-  width: 900px;
-  margin:auto;
-  margin-top: 30px;
-}
-
 header nav{
-  background-color: blue;
+  background-color: #99c0c1;
   width: 900px;
   height: 100px;
   margin: auto;
-  border: 3px dotted black;
+  margin-top: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  /* border: 3px dotted black; */
+  border-radius: 20px;
 }
 
 h1{
@@ -36,6 +32,11 @@ nav li {
   line-height: 50px;
 }
 
+nav li:nth-child(:first) {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
 nav li:not(:first-child) {
   border: 3px solid black;
   margin-left: 50px;
@@ -43,6 +44,16 @@ nav li:not(:first-child) {
 
 nav a{
   color: white;
+}
+
+#game-container{
+  background-color: #91d291;
+  height: 600px;
+  width: 900px;
+  margin:auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
 }
 
 #game-container h2{
@@ -64,7 +75,8 @@ nav a{
 }
 
 footer {
+  background-color: #99c0c1;
+  margin: auto;
   margin-top: 15px;
-  height: 50px;
   width: 960px;
 }
