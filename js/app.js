@@ -4,6 +4,8 @@ let userLuggage = 15;
 let allCountries = [];
 let gameContainer = document.getElementById('game-container');
 let userName;
+let currentCountry;
+let form = document.createElement('form');
 
 // document.getElementById.style("")
 // let grabName = localStorage.getItem('user');
@@ -30,8 +32,9 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
   allCountries.push(this);
 }
 
-let canada = new Country('Canada', 'img/nick-karvounis-3_ZGrsirryY-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', false, 'trueOrFalse');
+let canada = new Country('Canada', 'img/nick-karvounis-3_ZGrsirryY-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
 let newZealand = new Country('New Zealand', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
+// let denmark = new Country('Denmark', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What\'s the capitol of Denmark?', 'Copenhagen', 'userInput');
 
 let h2 = document.createElement('h2');
 h2.textContent = 'Welcome! Click START to begin';
@@ -43,30 +46,43 @@ function clickStart(event) {
   if (click === 'start') {
     gameContainer.innerHTML = '';
     // launch game
-    canada.imgRender(this.src1);
     // canada.imgRender(this.src2);
-    newZealand.qRender();
+    // newZealand.qRender();
+    let number = getRandomIndex(allCountries.length);
+    currentCountry = allCountries[number];
+    currentCountry.imgRender(this.src1);
+    currentCountry.qRender();
+    allCountries.splice(number, 1);
     // canada.qRender();
-
+    // denmark.qRender();
+    // form.id = 'question-box';
+    // gameContainer.appendChild(form);
+    gameContainer.removeEventListener('click', clickStart);
+    gameContainer.addEventListener('submit', submitCheck);
   }
   console.log('works');
 }
 
+// get random index
+function getRandomIndex(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 Country.prototype.qRender = function () {
-  let div = document.createElement('div');
-  div.id = 'question-box';
-  gameContainer.appendChild(div);
+  let form = document.createElement('form');
+  form.id = 'question-box';
+  gameContainer.appendChild(form);
   let qH3 = document.createElement('h3');
   qH3.textContent = this.quizQ;
-  div.appendChild(qH3);
+  form.appendChild(qH3);
   let fieldset = document.createElement('fieldset');
-  div.appendChild(fieldset);
+  form.appendChild(fieldset);
 
 
   let answer1 = document.createElement('input');
   let answer2 = document.createElement('input');
-  let answer3 = document.createElement('input');
-  let answer4 = document.createElement('input');
+  // let answer3 = document.createElement('input');
+  // let answer4 = document.createElement('input');
   if (this.type === 'trueOrFalse') {
     let answerLabelT = document.createElement('label');
     let answerLabelF = document.createElement('label');
@@ -74,7 +90,10 @@ Country.prototype.qRender = function () {
     answerLabelF.textContent = 'False';
     fieldset.appendChild(answerLabelT);
     fieldset.appendChild(answerLabelF);
-
+    answer1.id = 'true';
+    answer2.id = 'false';
+    answer1.value = 'true';
+    answer2.value = 'false';
     console.log('works1');
     answer1.type = 'radio';
     answer2.type = 'radio';
@@ -92,12 +111,17 @@ Country.prototype.qRender = function () {
       let answer = document.createElement('input');
       answer.type = 'radio';
       answer.name = 't';
+      answer.value = `${this.choices[i]}`;
       answerLabel1.appendChild(answer);
     }
   }
-  else if (this.type === 'userInput') {
-    console.log('works');
-  }
+  // else if (this.type === 'userInput') {
+  //   let userAnswer = document.createElement('input');
+  //   userAnswer.type = 'text';
+  //   fieldset.appendChild(userAnswer);
+
+  //   console.log('works2');
+  // }
   let submit = document.createElement('button');
   submit.type = 'submit';
   submit.textContent = 'SUBMIT';
@@ -106,9 +130,26 @@ Country.prototype.qRender = function () {
 
 function submitCheck(event) {
   event.preventDefault();
+  // console.log('I am here');
+  let answerT = event.target.t.value;
+  // console.log(answerT);
+  gameContainer.innerHTML = '';
+  if (answerT === newZealand.quizA) {
+    let aH3 = document.createElement('h3');
+    aH3.textContent = 'That\'s correct!';
+    form.appendChild(aH3);
+  }
+  else {
+    let aH3 = document.createElement('h3');
+    aH3.textContent = 'WRONG!';
+    form.appendChild(aH3);
+  }
+  let number = getRandomIndex(allCountries.length);
+  currentCountry = allCountries[number];
 
-
-
+  currentCountry.imgRender(this.src1);
+  currentCountry.qRender();
+  allCountries.splice(number, 1);
 }
 
 Country.prototype.imgRender = function () {
@@ -128,5 +169,5 @@ Country.prototype.imgRender = function () {
 
 
 
-gameContainer.addEventListener('submit', submitCheck);
+
 gameContainer.addEventListener('click', clickStart);
