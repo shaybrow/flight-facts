@@ -51,7 +51,7 @@ new Country('South Korea', 'img/southkorea.jpg', 'img/southkorea.png', 'Does Sou
 
 new Country('Ethiopia', 'img/ethiopia.jpg', 'img/ethiopia.png', 'How old is the worlds oldest hominid remains, discovered in Ethiopia?', '4.4 million years old', 'multiChoice', ['2000 years old', '200,000 years old', '3.2 million years old', '4.4 million years old', '1 billion years old']);
 
-new Country('Denmark', 'img/denmark.jpg', 'img/denmark.png', 'In Denmark, one of the happiest countries in the world, the primary language is Danish. What\'s the Danish word for please?', 'Danish has no word for "please"', 'multiChoice', ['Dansk', 'Har ingen', 'ord for', 'Danish has no word for "please"']);
+new Country('Denmark', 'img/denmark.jpg', 'img/denmark.png', 'In Denmark, one of the happiest countries in the world, the primary language is Danish. What\'s the Danish word for please?', 'Danish has no word for "please"', 'multiChoice', ['Dansk', 'Har ingen', 'Ord for', 'Danish has no word for "please"']);
 
 new Country('Canada', 'img/canada.jpg', 'img/canada.png', 'Do all Canadians live in igloos?', 'false', 'trueOrFalse');
 
