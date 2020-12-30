@@ -63,32 +63,29 @@ new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of
 
 new Country('Japan', 'img/japan.jpg', 'img/japan.png', 'What is the fifth largest city in Japan?', 'Sapporo', 'multiChoice', ['Fukuoka', 'Osaka', 'Sapporo', 'Kyoto']);
 
-// let denmark = new Country('Denmark', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'img/shawn-ang-72TE3gdDWhw-unsplash.jpg', 'What\'s the capitol of Denmark?', 'Copenhagen', 'userInput');
-
-let h2 = document.createElement('h2');
-h2.textContent = 'Welcome! Click START to begin';
-h2.id = 'start';
-gameContainer.appendChild(h2);
-
+function initialDisplay() {
+  let h2 = document.createElement('h2');
+  h2.textContent = 'Welcome Aboard! Click here to begin.';
+  h2.id = 'start';
+  gameContainer.appendChild(h2);
+  let img = document.createElement('img');
+  img.src = 'img/takeoff.jpg';
+  img.id = 'starting';
+  gameContainer.appendChild(img);
+}
 function clickStart(event) {
   let click = event.target.id;
   if (click === 'start') {
     getUserName();
     gameContainer.innerHTML = '';
-
     let number = getRandomIndex(allCountries.length);
     currentCountry = allCountries[number];
     currentCountry.imgRender(this.src1);
     currentCountry.qRender();
     allCountries.splice(number, 1);
-    // canada.qRender();
-    // denmark.qRender();
-    // form.id = 'question-box';
-    // gameContainer.appendChild(form);
     gameContainer.removeEventListener('click', clickStart);
     gameContainer.addEventListener('submit', submitCheck);
   }
-  console.log('works');
 }
 
 // get random index
@@ -120,7 +117,6 @@ Country.prototype.qRender = function () {
     answer2.id = 'false';
     answer1.value = 'true';
     answer2.value = 'false';
-    console.log('works1');
     answer1.type = 'radio';
     answer2.type = 'radio';
     answer1.name = 't';
@@ -148,7 +144,6 @@ Country.prototype.qRender = function () {
   //   userAnswer.type = 'text';
   //   fieldset.appendChild(userAnswer);
 
-  //   console.log('works2');
   // }
   let submit = document.createElement('button');
   submit.type = 'submit';
@@ -158,9 +153,7 @@ Country.prototype.qRender = function () {
 
 function submitCheck(event) {
   event.preventDefault();
-  // console.log('I am here');
   let answerT = event.target.t.value;
-  // console.log(answerT);
   gameContainer.innerHTML = '';
   if (answerT === currentCountry.quizA) {
     lastQuestion = true;
@@ -169,16 +162,7 @@ function submitCheck(event) {
     lastQuestion = false;
   }
   if (allCountries.length === 0) {
-    let aH4 = document.createElement('h4');
-    aH4.textContent = `Congratulations! You saved ${userLuggage} pieces of luggage!`;
-    gameContainer.appendChild(aH4);
-    let a = document.createElement('a');
-    a.id = 'high-score';
-    a.href = 'scores.html';
-    a.textContent = 'View High Scores';
-    gameContainer.appendChild(a);
-    let stringLuggage = JSON.stringify(`${userLuggage} ${userName}`);
-    localStorage.setItem('score', stringLuggage);
+    gameOver();
   }
   else {
     lastCountry = currentCountry;
@@ -191,9 +175,25 @@ function submitCheck(event) {
   }
 }
 
-// function gameOver(){
+function gameOver() {
+  let img = document.createElement('img');
+  img.src = 'img/outro.gif';
+  img.id = 'plane';
+  gameContainer.appendChild(img);
+  let div = document.createElement('div');
+  gameContainer.appendChild(div);
+  let aH4 = document.createElement('h4');
+  aH4.textContent = `Congratulations! You saved ${userLuggage} pieces of luggage!`;
+  div.appendChild(aH4);
+  let a = document.createElement('a');
+  a.id = 'high-score';
+  a.href = 'scores.html';
+  a.textContent = 'View High Scores';
+  div.appendChild(a);
+  let stringLuggage = JSON.stringify(`${userLuggage} ${userName}`);
+  localStorage.setItem('score', stringLuggage);
+}
 
-// }
 function answerResponse() {
   if (lastQuestion === true) {
     let aH6 = document.createElement('h6');
@@ -229,6 +229,6 @@ Country.prototype.imgRender = function () {
 
 
 
-
+initialDisplay();
 
 gameContainer.addEventListener('click', clickStart);

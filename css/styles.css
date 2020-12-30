@@ -36,7 +36,50 @@ nav ul {
   /* margin-left: 5px;
   margin-top: 5px; */
 }
-
+#starting{
+  height: 500px;
+  display:block;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 50px;
+}
+div {
+  height: 200px;
+  background-color: #99c0c1;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 200px;
+  font-size: 2em;
+  text-decoration: none;
+}
+div h4{
+  display:block;
+}
+div a:hover{
+  color: rgb(117, 2, 248);
+  transition: 0.3s;
+}
+#plane {
+  position: absolute;
+  top: 0px;
+  right:0px;
+  height:300px;
+  opacity: 1;
+}
+div a{
+  display: inline-block;
+  margin-top: 50px;
+  background-color: white;
+  padding: 10px;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  border-radius: 10px;
+}
 nav li {
   display: inline-block;
   /* border: 3px solid black; */
