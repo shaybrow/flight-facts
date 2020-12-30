@@ -1,5 +1,188 @@
+/* styles.css */
+/* General Style rules */
 body{
+background-color: bisque;
+}
 
-background-color: gainsboro;
+main {
+  width: 960px;
+  margin: auto;
+  margin-top: 30px;
+}
 
+header nav{
+  background-color: #99c0c1;
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  /* border: 3px dotted black; */
+  border-radius: 20px;
+}
+
+h1{
+  font-size: 3em;
+  border: 3px solid #d4d493;
+  border-radius: 20px;
+  padding: 7px;
+  margin-top: 15px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+nav ul {
+  float: right;
+  /* margin-left: 5px;
+  margin-top: 5px; */
+}
+
+nav li {
+  display: inline-block;
+  /* border: 3px solid black; */
+  /* line-height: 50px; */
+}
+
+nav li:nth-child(:first) {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+nav li:not(:first-child) {
+  /* border: 3px solid black; */
+  margin-right: 10px;
+  height: 100px;
+  width: 125px;
+}
+
+nav li:nth-child(2) {
+  margin-right: 0;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  line-height: 100px;
+  display: block;
+  text-align: center;
+}
+
+#game-container{
+  background-color: #91d291;
+  height: 600px;
+  width: 900px;
+  margin:auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  position: relative;
+  overflow: hidden;
+}
+
+#question-box {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, .70);
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+#question-box label {
+  display: block;
+  margin-top: 3px;
+}
+
+#question-box input {
+  float: left;
+}
+
+#question-box button {
+  float: right;
+  margin-top: 3px;
+}
+
+#game-container h2{
+  font-size: 2em;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.back-images{
+  height: 600px;
+  width: 900px;
+}
+
+.corner-images {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+#darci {
+  height: 300px;
+}
+
+#foot {
+  background-color: #d08c8c;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  padding: 5px;
+}
+
+footer section {
+  width: 900px;
+  margin: 5px;
+}
+
+#shay-pic{
+  height: 200px;
+}
+
+.photo-cred {
+  width: 900px;
+  background-color: #91d291;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  padding: 10px;
+}
+
+.photo-cred p {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.photo-cred li:first-child {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.photo-cred li:not(:first-child) {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.photo-cred a {
+  text-decoration: none;
+}
+
+.photo-cred a:link {
+  color: #444;
+}
+
+.photo-cred a:visited {
+  color: #444;
+}
+
+.photo-cred a:hover {
+  color: rgb(117, 2, 248);
+  transition: 0.5s;
 }
