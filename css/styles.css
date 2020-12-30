@@ -142,3 +142,20 @@ footer section {
   font-size: 18px;
   margin-top: 5px;
 }
+
+.photo-cred a {
+  text-decoration: none;
+}
+
+.photo-cred a:link {
+  color: #444;
+}
+
+.photo-cred a:visited {
+  color: #444;
+}
+
+.photo-cred a:hover {
+  color: rgb(117, 2, 248);
+  transition: 0.5s;
+}
