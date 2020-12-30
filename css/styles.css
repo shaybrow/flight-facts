@@ -54,6 +54,32 @@ nav a{
   margin-top: 30px;
   border-radius: 20px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  position: relative;
+  overflow: hidden;
+}
+
+#question-box {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, .70);
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+#question-box label {
+  display: block;
+  margin-top: 3px;
+}
+
+#question-box input {
+  float: left;
+}
+
+#question-box button {
+  float: right;
+  margin-top: 3px;
 }
 
 #game-container h2{
@@ -68,6 +94,7 @@ nav a{
 .back-images{
   height: 600px;
   width: 900px;
+  
 }
 
 #darci {
@@ -77,9 +104,18 @@ nav a{
 footer {
   background-color: #99c0c1;
   margin: auto;
-  margin-top: 15px;
-  width: 960px;
+  margin-top: 30px;
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  padding: 5px;
 }
+
+footer section {
+  width: 900px;
+  margin: 5px;
+}
+
 #shay-pic{
   height: 200px;
 }
