@@ -21,6 +21,7 @@ p{
 
 img{
   margin-top: 0px;
+  border-radius: 20px;
 }
 
 section:not(first-child){
@@ -47,6 +48,15 @@ h5 {
   border-radius: 20px;
 }
 
+#darci-pic {
+  height: 250px;
+  float: right;
+}
+
+#darci-links {
+  text-align: right;
+}
+
 #jason {
   height: 330px;
   background-color: #ebe773;
@@ -66,6 +76,16 @@ h5 {
   margin-bottom: 5px;
 }
 
+#jason-pic{
+  height: 250px;
+  float: left;
+}
+
+#jason-links {
+  text-align: right;
+  margin-top: 0px;
+}
+
 #shay {
   height: 310px;
   background-color: #91d291;
@@ -78,27 +98,15 @@ h5 {
   width: 545px;
 }
 
-#darci-pic {
-  height: 250px;
-  float: right;
-}
-
 #shay-pic{
   height: 250px;
   float: right;
 }
 
-#jason-pic{
-  height: 250px;
-  float: left;
-}
-
-.links-right {
-  text-align: right;
-}
-
 #shay-links {
   margin-top: 40px;
+  text-align: right;
+  width: 545px;
 }
 
 footer {
