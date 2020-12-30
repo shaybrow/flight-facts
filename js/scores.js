@@ -4,6 +4,9 @@ let highScores = [];
 let parentUl = document.getElementById('leader-board');
 let parentOl = document.getElementById('leader-name');
 
+parentOl.textContent = 'Username';
+parentUl.textContent = 'Score (luggage remaining)';
+
 function Score(userName, luggage) {
   this.username = userName;
   this.luggage = luggage;
@@ -14,13 +17,26 @@ function parseScore(score) {
   let parsedScore = score.match(/\d+/g);
   let parsedUser = score.match(/[a-zA-Z]+/g);
   new Score(parsedUser, parsedScore);
+  let stringifyScores = JSON.stringify(highScores);
+  localStorage.setItem('scores', stringifyScores);
+}
+let grabScores = localStorage.getItem('scores');
+if (grabScores) {
+  highScores = JSON.parse(grabScores);
+} else {
+  new Score('Jason', 14);
+  new Score('Shay', 5);
+  new Score('Darci', 12);
+  new Score('Pilot Jane', 15);
+  new Score('Flight Attendant Jim', 13);
+  new Score('Simple Sam', 7);
+
 }
 
 let grabScore = localStorage.getItem('score');
 if (grabScore) {
   let random = JSON.parse(grabScore);
   parseScore(random);
-  console.log(highScores);
 }
 
 function renderScores() {
@@ -33,7 +49,9 @@ function renderScores() {
     parentOl.appendChild(li2);
   }
 }
-// need to figure out how to order the objects from high score to low
+
+
+// order the objects from high score to low
 function sortScores() {
   highScores.sort(function (a, b) {
     return b.luggage - a.luggage;
@@ -42,9 +60,5 @@ function sortScores() {
 
 
 // render list function
-
-new Score('Jason', 15);
-new Score('Shay', 5);
-new Score('Darci', 12);
 sortScores();
 renderScores();
