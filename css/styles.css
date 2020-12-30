@@ -23,7 +23,7 @@ header nav{
 
 h1{
   font-size: 3em;
-  border: 3px solid #d4d493;
+  border: 3px solid #ebe773;
   border-radius: 20px;
   padding: 7px;
   margin-top: 15px;
@@ -50,7 +50,7 @@ nav li:nth-child(:first) {
 
 nav li:not(:first-child) {
   /* border: 3px solid black; */
-  margin-right: 10px;
+  margin-right: 15px;
   height: 100px;
   width: 125px;
 }
@@ -123,10 +123,6 @@ nav a{
   right: 5px;
 }
 
-#darci {
-  height: 300px;
-}
-
 #foot {
   background-color: #d08c8c;
   margin: auto;
@@ -141,10 +137,6 @@ nav a{
 footer section {
   width: 900px;
   margin: 5px;
-}
-
-#shay-pic{
-  height: 200px;
 }
 
 .photo-cred {
