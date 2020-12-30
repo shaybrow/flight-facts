@@ -30,7 +30,7 @@ function getUserName() {
 function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choices = '') {
   this.name = countryName;
   this.src1 = imgSrc1;
-  this.scr2 = imgSrc2;
+  this.src2 = imgSrc2;
   this.quizQ = quizQ;
   this.quizA = quizA;
   this.type = answerType;
@@ -57,7 +57,7 @@ new Country('Canada', 'img/canada.jpg', 'img/canada.png', 'Do all Canadians live
 
 new Country('New Zealand', 'img/newzealand.jpg', 'img/newzealand.png', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
 
-new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwain.png', 'In Taiwan, the garbage truck plays Beethoven\'s Fur Elise to announce their arrival.', 'true', 'trueOrFalse');
+new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwan.png', 'In Taiwan, the garbage truck plays Beethoven\'s Fur Elise to announce their arrival.', 'true', 'trueOrFalse');
 
 new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the english language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
 
@@ -209,11 +209,16 @@ function answerResponse() {
 }
 
 Country.prototype.imgRender = function () {
-  let img = document.createElement('img');
-  img.src = this.src1;
-  img.classList = 'back-images';
-  gameContainer.appendChild(img);
+  let img1 = document.createElement('img');
+  img1.src = this.src1;
+  img1.classList = 'back-images';
+  gameContainer.appendChild(img1);
+  let img2 = document.createElement('img');
+  img2.src = this.src2;
+  img2.classList = 'corner-images';
+  gameContainer.appendChild(img2);
 };
+
 
 
 

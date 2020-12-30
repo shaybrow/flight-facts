@@ -115,7 +115,12 @@ nav a{
 .back-images{
   height: 600px;
   width: 900px;
-  
+}
+
+.corner-images {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 #darci {
