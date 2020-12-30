@@ -4,6 +4,9 @@ let highScores = [];
 let parentUl = document.getElementById('leader-board');
 let parentOl = document.getElementById('leader-name');
 
+parentOl.textContent = 'Username';
+parentUl.textContent = 'Score (luggage remaining)';
+
 function Score(userName, luggage) {
   this.username = userName;
   this.luggage = luggage;

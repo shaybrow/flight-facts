@@ -190,6 +190,8 @@ footer section {
   height: 200px;
 }
 
+/* these styles affect photo-cred.html */
+
 .photo-cred {
   width: 900px;
   background-color: #91d291;
@@ -228,4 +230,43 @@ footer section {
 .photo-cred a:hover {
   color: rgb(117, 2, 248);
   transition: 0.5s;
+}
+
+/* these styles affect the high score page */
+
+main {
+  width: 900px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  background-color: #d19999;
+}
+
+#leader-name {
+  list-style: decimal inside;
+  width: 300px;
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  line-height: 35px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#leader-name li {
+  font-weight: normal;
+}
+
+#leader-board {
+  width: 300px;
+  display: inline-block;
+  line-height: 35px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#leader-board li {
+  font-weight: normal;
 }
