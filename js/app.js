@@ -59,7 +59,7 @@ new Country('New Zealand', 'img/newzealand.jpg', 'img/newzealand.png', 'What is 
 
 new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwan.png', 'In Taiwan, the garbage truck plays Beethoven\'s Fur Elise to announce their arrival.', 'true', 'trueOrFalse');
 
-new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the english language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
+new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the English language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
 
 new Country('Japan', 'img/japan.jpg', 'img/japan.png', 'What is the fifth largest city in Japan?', 'Sapporo', 'multiChoice', ['Fukuoka', 'Osaka', 'Sapporo', 'Kyoto']);
 
