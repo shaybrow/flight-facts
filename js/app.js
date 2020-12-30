@@ -39,7 +39,7 @@ function Country(countryName, imgSrc1, imgSrc2, quizQ, quizA, answerType, choice
 }
 
 // instantiations of Country
-new Country('Indonesia', 'img/indonesia.jpg', 'img/indonesia.png', 'In Indonesia resides the world\'s largest flower. What is its name?', 'corpse lily', 'multiChoice', ['Corpse Lily', 'Moth Orchid', 'Flower of Charm', 'Moon Orchid']);
+new Country('Indonesia', 'img/indonesia.jpg', 'img/indonesia.png', 'In Indonesia resides the world\'s largest flower. What is its name?', 'Corpse lily', 'multiChoice', ['Corpse lily', 'Moth orchid', 'Flower of charm', 'Moon orchid']);
 
 new Country('Australia', 'img/australia.jpg', 'img/australia.png', 'What is the capital of Australia?', 'Canberra', 'multiChoice', ['Canberra', 'Sydney', 'Brisbane', 'Melbourne']);
 
@@ -57,7 +57,7 @@ new Country('Canada', 'img/canada.jpg', 'img/canada.png', 'Do all Canadians live
 
 new Country('New Zealand', 'img/newzealand.jpg', 'img/newzealand.png', 'What is the population of New Zealand?', '5 million', 'multiChoice', ['5 million', '2 million', '7 million', '10 million']);
 
-new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwain.png', 'In Taiwan, the garbage truck plays Beethoven\'s <em>Fur Elise</em> to announce their arrival.', 'true', 'trueOrFalse');
+new Country('Taiwan', 'img/taiwan.jpg', 'img/taiwain.png', 'In Taiwan, the garbage truck plays Beethoven\'s Fur Elise to announce their arrival.', 'true', 'trueOrFalse');
 
 new Country('Norway', 'img/norway.jpg', 'img/norway.png', 'Norway is the name of the country in the english language. In Norwegian, the country is named which of the following:', 'Norge', 'multiChoice', ['Norja', 'Norge', 'Njorweg', 'Norwegen']);
 
@@ -116,8 +116,6 @@ Country.prototype.qRender = function () {
     let answerLabelF = document.createElement('label');
     answerLabelT.textContent = 'True';
     answerLabelF.textContent = 'False';
-    fieldset.appendChild(answerLabelT);
-    fieldset.appendChild(answerLabelF);
     answer1.id = 'true';
     answer2.id = 'false';
     answer1.value = 'true';
@@ -128,19 +126,21 @@ Country.prototype.qRender = function () {
     answer1.name = 't';
     answer2.name = 't';
     // .name the same allows only 1 answer
-    answerLabelT.appendChild(answer1);
-    answerLabelF.appendChild(answer2);
+    fieldset.appendChild(answer1);
+    fieldset.appendChild(answerLabelT);
+    fieldset.appendChild(answer2);
+    fieldset.appendChild(answerLabelF);
   }
   else if (this.type === 'multiChoice') {
     for (let i = 0; i < this.choices.length; i++) {
       let answerLabel1 = document.createElement('label');
       answerLabel1.textContent = `${this.choices[i]}`;
-      fieldset.appendChild(answerLabel1);
       let answer = document.createElement('input');
       answer.type = 'radio';
       answer.name = 't';
       answer.value = `${this.choices[i]}`;
-      answerLabel1.appendChild(answer);
+      fieldset.appendChild(answer);
+      fieldset.appendChild(answerLabel1);
     }
   }
   // else if (this.type === 'userInput') {
@@ -196,15 +196,15 @@ function submitCheck(event) {
 // }
 function answerResponse() {
   if (lastQuestion === true) {
-    let aH3 = document.createElement('h3');
-    aH3.textContent = 'That\'s correct!';
-    form.appendChild(aH3);
+    let aH6 = document.createElement('h6');
+    aH6.textContent = 'That\'s correct!';
+    form.appendChild(aH6);
   }
   if (lastQuestion === false) {
-    let aH3 = document.createElement('h3');
-    aH3.textContent = `WRONG! The correct answer was ${lastCountry.quizA}.`;
+    let aH6 = document.createElement('h6');
+    aH6.textContent = `WRONG! The correct answer was ${lastCountry.quizA}.`;
     userLuggage--;
-    form.appendChild(aH3);
+    form.appendChild(aH6);
   }
 }
 
