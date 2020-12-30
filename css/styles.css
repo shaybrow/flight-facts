@@ -23,13 +23,24 @@ header nav{
 
 h1{
   font-size: 3em;
-  border: 3px dotted black;
+  border: 3px solid #d4d493;
+  border-radius: 20px;
+  padding: 7px;
+  margin-top: 15px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+nav ul {
+  float: right;
+  /* margin-left: 5px;
+  margin-top: 5px; */
 }
 
 nav li {
   display: inline-block;
   /* border: 3px solid black; */
-  line-height: 50px;
+  /* line-height: 50px; */
 }
 
 nav li:nth-child(:first) {
@@ -38,12 +49,22 @@ nav li:nth-child(:first) {
 }
 
 nav li:not(:first-child) {
-  border: 3px solid black;
-  margin-left: 50px;
+  /* border: 3px solid black; */
+  margin-right: 10px;
+  height: 100px;
+  width: 125px;
+}
+
+nav li:nth-child(2) {
+  margin-right: 0;
 }
 
 nav a{
   color: white;
+  text-decoration: none;
+  line-height: 100px;
+  display: block;
+  text-align: center;
 }
 
 #game-container{
@@ -101,10 +122,11 @@ nav a{
   height: 300px;
 }
 
-footer {
-  background-color: #99c0c1;
+#foot {
+  background-color: #d08c8c;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 15px;
   width: 900px;
   border-radius: 20px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
