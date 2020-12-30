@@ -6,7 +6,7 @@
 
 As a user I would like to learn about the site creators so I can get to know them better
 
-- link to about me page from home 
+- link to about me page from home
 
 - about me populate with interesting info about creators
 About me page is readable and accessible
@@ -82,9 +82,9 @@ This app will never save scores across different computers
 
 ### MVP
 
-A functional trivia game that confirms correct answers or provides correct answer if user provided them wrong 
-User is provided visual cues to share a small story about the country they’re visiting 
-User provides a handle which is stored locally 
+A functional trivia game that confirms correct answers or provides correct answer if user provided them wrong
+User is provided visual cues to share a small story about the country they’re visiting
+User provides a handle which is stored locally
 Upon completing the game user’s score is displayed on a scoreboard along with their handle, this score is also stored locally
 3 question types: t/f, multiple choice, fill in the blank
 
@@ -106,7 +106,7 @@ Timer
 
 A user can play the flight facts game to completion
 A user can easily navigate between all pages on the site
-A user can return later on the same computer and see their score displayed 
+A user can return later on the same computer and see their score displayed
 
 ### Data Flow
 
@@ -129,7 +129,7 @@ Question (random order) and remove country
 Display country imgSrc
 “Welcome to [countryName]!”
 Display question + answerType
-splice() into local variable 
+splice() into local variable
 Submit button; user answers
 checkCorrectAnswer
 If the user guesses correctly (userAnswer === Country.answer)
@@ -162,14 +162,30 @@ Leaderboard should be separately iterated through to be ordered in highest to lo
 
 ## Sources
 
-- [HP BAR](https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar/20277165)
+- [HP Bar](https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar/20277165)
+
+- [HTML Progress Bar](https://www.w3schools.com/tags/tag_progress.asp)
 
 - [Radio Button](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
 
-- [Array Sorting](https://stackoverflow.com/questions/38843059/how-to-set-font-style-italic-using-javascript)
+
+- [Array Sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
 
 - [Italics](https://stackoverflow.com/questions/38843059/how-to-set-font-style-italic-using-javascript)
 
-- [Splitting hairs (and strings)](https://stackoverflow.com/questions/42827884/split-a-number-from-a-string-in-javascript)
+- [Splitting Hairs (and strings)](https://stackoverflow.com/questions/42827884/split-a-number-from-a-string-in-javascript)
 
-- [Styling hyperlinks](https://www.w3schools.com/css/css_link.asp)
+- [Styling Hyperlinks](https://www.w3schools.com/css/css_link.asp)
+
+- [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp)
+
+- [Position Text on an Image](https://www.w3schools.com/howto/howto_css_image_text.asp)
+
+## Collaborators
+
+- [Dar-Ci Calhoun](https://github.com/dcalhoun286)
+
+- [Seamus Brown](https://github.com/shaybrow)
+
+- [Jason Quaglia](https://github.com/stubtail42)
