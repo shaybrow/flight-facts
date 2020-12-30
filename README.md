@@ -172,3 +172,4 @@ Leaderboard should be separately iterated through to be ordered in highest to lo
 
 - [Splitting hairs (and strings)](https://stackoverflow.com/questions/42827884/split-a-number-from-a-string-in-javascript)
 
+- [Styling hyperlinks](https://www.w3schools.com/css/css_link.asp)

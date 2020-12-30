@@ -141,3 +141,43 @@ footer section {
 #shay-pic{
   height: 200px;
 }
+
+.photo-cred {
+  width: 900px;
+  background-color: #91d291;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  padding: 10px;
+}
+
+.photo-cred p {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.photo-cred li:first-child {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.photo-cred li:not(:first-child) {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.photo-cred a {
+  text-decoration: none;
+}
+
+.photo-cred a:link {
+  color: #444;
+}
+
+.photo-cred a:visited {
+  color: #444;
+}
+
+.photo-cred a:hover {
+  color: rgb(117, 2, 248);
+  transition: 0.5s;
+}
