@@ -8,9 +8,9 @@ let currentCountry;
 let form = document.createElement('form');
 let lastQuestion = 0;
 let lastCountry;
+let fieldset = document.createElement('fieldset');
 
 function getUserName() {
-  // document.getElementById.style('');
   let grabName = localStorage.getItem('user');
   if (grabName) {
     userName = JSON.parse(grabName);
@@ -101,13 +101,11 @@ Country.prototype.qRender = function () {
   let qH3 = document.createElement('h3');
   qH3.textContent = this.quizQ;
   form.appendChild(qH3);
-  let fieldset = document.createElement('fieldset');
+  fieldset = document.createElement('fieldset');
   form.appendChild(fieldset);
 
   let answer1 = document.createElement('input');
   let answer2 = document.createElement('input');
-  // let answer3 = document.createElement('input');
-  // let answer4 = document.createElement('input');
   if (this.type === 'trueOrFalse') {
     let answerLabelT = document.createElement('label');
     let answerLabelF = document.createElement('label');
@@ -121,7 +119,6 @@ Country.prototype.qRender = function () {
     answer2.type = 'radio';
     answer1.name = 't';
     answer2.name = 't';
-    // .name the same allows only 1 answer
     fieldset.appendChild(answer1);
     fieldset.appendChild(answerLabelT);
     fieldset.appendChild(answer2);
@@ -139,17 +136,19 @@ Country.prototype.qRender = function () {
       fieldset.appendChild(answerLabel1);
     }
   }
-  // else if (this.type === 'userInput') {
-  //   let userAnswer = document.createElement('input');
-  //   userAnswer.type = 'text';
-  //   fieldset.appendChild(userAnswer);
-
-  // }
+  updateLuggage();
   let submit = document.createElement('button');
   submit.type = 'submit';
   submit.textContent = 'SUBMIT';
   fieldset.appendChild(submit);
 };
+
+function updateLuggage() {
+  let h3 = document.createElement('h3');
+  h3.id = 'luggage-counter';
+  h3.textContent = `${userLuggage}/15 pieces of luggage `;
+  fieldset.appendChild(h3);
+}
 
 function submitCheck(event) {
   event.preventDefault();
@@ -218,16 +217,6 @@ Country.prototype.imgRender = function () {
   img2.classList = 'corner-images';
   gameContainer.appendChild(img2);
 };
-
-
-
-
-
-
-
-
-
-
 
 initialDisplay();
 

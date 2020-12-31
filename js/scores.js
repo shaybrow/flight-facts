@@ -40,13 +40,20 @@ if (grabScore) {
 }
 
 function renderScores() {
+  let previous;
+  let previous2;
   for (let i = 0; i < highScores.length; i++) {
     let li1 = document.createElement('li');
     li1.textContent = highScores[i].luggage;
-    parentUl.appendChild(li1);
     let li2 = document.createElement('li');
     li2.textContent = highScores[i].username;
-    parentOl.appendChild(li2);
+    if (previous !== li2.textContent && previous2 !== li1.textContent) {
+      parentUl.appendChild(li1);
+      parentOl.appendChild(li2);
+    }
+    previous = li2.textContent;
+    previous2 = li1.textContent;
+
   }
 }
 
