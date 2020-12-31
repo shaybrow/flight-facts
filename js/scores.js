@@ -47,7 +47,7 @@ function renderScores() {
     li1.textContent = highScores[i].luggage;
     let li2 = document.createElement('li');
     li2.textContent = highScores[i].username;
-    if (previous !== li2.textContent && previous2 !== li1.textContent) {
+    if (previous !== li2.textContent || previous2 !== li1.textContent) {
       parentUl.appendChild(li1);
       parentOl.appendChild(li2);
     }
